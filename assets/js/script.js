@@ -142,14 +142,14 @@ function fiveDayForcast (cityName) {
         for(var i = 0; i < numDays.length; i++){
           var numDaysIndex = numDays[i];
 
-          const newDate = response.list[numDaysIndex].dt_txt;
+          var newDate = response.list[numDaysIndex].dt;
           var icon = response.list[numDaysIndex].weather[0].icon;
           var temp = response.list[numDaysIndex].main.temp;
           var wind = response.list[numDaysIndex].wind.speed;
           var humidity = response.list[numDaysIndex].main.humidity;
           const num = 10;
           
-          $("#day" + (i + 1) + "Date").text(newDate);
+          $("#day" + (i + 1) + "Date").text(moment.unix(newDate).format("MM/DD/YYYY"));
           $("#day" + (i + 1) + "Icon").attr("src", " http://openweathermap.org/img/wn/" + icon + ".png");
           $("#day" + (i + 1) + "Temp").text(temp + "° F");
           $("#day" + (i + 1) + "Wind").text(wind + " MPH");
