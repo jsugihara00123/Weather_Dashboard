@@ -26,8 +26,12 @@ WHEN I click on a city in the search history
 THEN I am again presented with current and future conditions for that city
 
 # Mock-Up
-
+## Demo
 ![Weather Application](./assets/images/06-server-side-apis-homework-demo.png)
+
+## Actual
+
+![Weather Application](./assets/images/Image2.png)
 
 # Greading Requirements
 
