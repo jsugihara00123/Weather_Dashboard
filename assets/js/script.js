@@ -57,20 +57,20 @@ function WeatherData(cityName){
       })
 
       // Setting the UV value and assigning it a color for the current location
-    .then(function(resp) {
-      $("#currentUVIndex").text(resp[0].value);
+    .then(function(response) {
+      $("#currentUVIndex").text(response[0].value);
 
-      console.log(resp[0].value);
+      console.log(response[0].value);
 
       var uviColor = "green";
       
-      if(resp[0].value < 3){
+      if(response[0].value < 3){
         uviColor = "green";
       }
-      else if (resp[0].value < 6 && resp[0].value >= 3 ) {
+      else if (response[0].value < 6 && response[0].value >= 3 ) {
         uviColor = "yellow";
       }
-      else if (resp[0].value < 8 && resp[0].value >= 6 ) {
+      else if (response[0].value < 8 && response[0].value >= 6 ) {
         uviColor = "orange";
       }
       else {
